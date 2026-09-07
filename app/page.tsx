@@ -99,16 +99,16 @@ export default function HomePage() {
           <p className="text-[16px] text-gray-500 font-light mb-10 max-w-xl mx-auto">
             Discutons de vos besoins et lançons une démonstration avec vos enseignants.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="grid grid-cols-2 gap-2.5 sm:flex sm:flex-row items-center justify-center sm:gap-4 w-full max-w-xl mx-auto">
             <Link
               href="/demo"
-              className="inline-flex items-center justify-center gap-2 h-[52px] px-8 bg-primary hover:bg-primary-dark text-navy text-[15px] font-bold rounded-2xl transition-all duration-200 teal-glow hover:scale-[1.03]"
+              className="inline-flex w-full items-center justify-center gap-1.5 h-[52px] px-2 sm:px-8 bg-primary hover:bg-primary-dark text-navy text-[12px] sm:text-[15px] font-bold rounded-2xl transition-all duration-200 teal-glow hover:scale-[1.03] whitespace-nowrap"
             >
               Demander une démo
             </Link>
             <Link
               href="/signup"
-              className="inline-flex items-center justify-center gap-2 h-[52px] px-8 border border-navy/15 text-navy text-[15px] font-semibold rounded-2xl hover:bg-navy/5 transition-all duration-200"
+              className="inline-flex w-full items-center justify-center gap-1.5 h-[52px] px-2 sm:px-8 border border-navy/15 text-navy text-[12px] sm:text-[15px] font-semibold rounded-2xl hover:bg-navy/5 transition-all duration-200 whitespace-nowrap"
             >
               Créer un compte
             </Link>
