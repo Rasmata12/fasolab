@@ -40,7 +40,7 @@ export function Hero() {
               transition={{ duration: 0.65, delay: 0.08 }}
               className="text-[clamp(2rem,9.5vw,4.4rem)] lg:text-[clamp(2.4rem,4.8vw,4.4rem)] font-display font-black text-white leading-[1.03] tracking-tight mb-3 sm:mb-5 [text-shadow:0_4px_24px_rgba(0,0,0,0.55)]"
             >
-              Le premier labo
+              Votre labo
               <br />
               de sciences{" "}
               <span className="relative inline-block">
@@ -56,7 +56,7 @@ export function Hero() {
                 </svg>
               </span>
               <br />
-              d&apos;Afrique
+              pensé pour l&apos;Afrique
             </motion.h1>
 
             <motion.p
