@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, ChevronDown } from "lucide-react";
+import { CheckCircle2, ChevronDown } from "lucide-react";
 import { CircuitNetwork } from "@/components/TechPattern";
 import { WaveBackground } from "@/components/WaveBackground";
 import { Logo } from "@/components/Logo";
@@ -80,7 +80,6 @@ export function Hero() {
                 className="btn-shine group inline-flex w-full items-center justify-center gap-1.5 h-[52px] px-2 sm:px-6 bg-primary hover:bg-primary-dark text-white text-[12px] sm:text-[15px] font-bold rounded-2xl transition-all duration-200 teal-glow hover:scale-[1.03] whitespace-nowrap"
               >
                 Demander une démo
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/packs"
