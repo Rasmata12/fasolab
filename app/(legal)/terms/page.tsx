@@ -10,7 +10,7 @@ export default function TermsPage() {
     <main className="pt-[100px] bg-white">
       <section className="py-20 md:py-28">
         <div className="max-w-3xl mx-auto px-6 md:px-10">
-          <h1 className="text-[clamp(2rem,4vw,2.75rem)] font-display font-extrabold text-navy leading-tight mb-4">
+          <h1 className="mx-auto max-w-3xl text-center text-[clamp(2rem,9vw,2.75rem)] md:text-[clamp(2rem,4vw,2.75rem)] font-display font-extrabold text-navy leading-[1.08] mb-4 [text-wrap:balance]">
             Conditions d&apos;utilisation
           </h1>
           <p className="text-[13px] text-gray-400 mb-10">Dernière mise à jour : juillet 2026</p>
