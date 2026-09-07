@@ -15,9 +15,9 @@ export function Footer() {
     <footer className="bg-navy">
       <div className="h-[1.5px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
-      <div className="max-w-[1560px] mx-auto px-6 md:px-10 xl:px-16 py-14 md:py-16">
+      <div className="max-w-[1560px] mx-auto px-4 sm:px-6 md:px-10 xl:px-16 py-12 sm:py-14 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-6 mb-12">
-          <div className="md:col-span-5">
+          <div className="md:col-span-5 min-w-0">
             <Logo variant="light" size="lg" className="mb-5" />
             <p className="text-[13px] text-white/40 font-light leading-relaxed max-w-[280px]">
               {SITE.description}
@@ -79,7 +79,7 @@ export function Footer() {
               <li>
                 <a
                   href={`mailto:${SITE.email}`}
-                  className="text-[13px] text-white/40 hover:text-primary transition-colors font-light"
+                  className="text-[13px] text-white/40 hover:text-primary transition-colors font-light break-words"
                 >
                   {SITE.email}
                 </a>
@@ -106,7 +106,7 @@ export function Footer() {
               <Link
                 key={l.label}
                 href={l.href}
-                className="text-[12px] text-white/20 hover:text-white/45 transition-colors font-light"
+                    className="text-[12px] text-white/20 hover:text-white/45 transition-colors font-light"
               >
                 {l.label}
               </Link>

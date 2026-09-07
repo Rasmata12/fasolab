@@ -14,22 +14,22 @@ import iconLight from "@/assets/images/fasolab-icon-light.png";
 
 export function Hero() {
   return (
-    <section className="relative h-[calc(100vh-52px)] min-h-[620px] bg-navy flex flex-col justify-center pt-[108px] overflow-hidden">
+    <section className="relative min-h-[calc(100svh-52px)] bg-navy flex flex-col justify-center pt-[112px] pb-20 lg:h-[calc(100vh-52px)] lg:min-h-[620px] lg:pt-[108px] lg:pb-0 overflow-hidden">
       <WaveBackground />
       <div className="absolute inset-0 pointer-events-none">
         <CircuitNetwork className="absolute -bottom-10 -right-10 w-[260px] h-[200px] md:w-[320px] md:h-[240px]" />
       </div>
 
-      <div className="relative z-10 max-w-[1560px] mx-auto px-6 md:px-10 xl:px-16 py-10 md:py-12 w-full">
+      <div className="relative z-10 max-w-[1560px] mx-auto px-4 sm:px-6 md:px-10 xl:px-16 py-8 md:py-12 w-full">
         <div className="grid lg:grid-cols-[1fr_1.25fr] gap-14 xl:gap-24 items-center">
           <div className="flex flex-col">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-3 self-start mb-6 pl-3 pr-5 py-2.5 rounded-full border border-primary/25 bg-primary/8 backdrop-blur-sm"
+              className="inline-flex max-w-full items-center gap-2 self-start mb-5 pl-2.5 pr-3.5 sm:pr-5 py-2.5 rounded-full border border-primary/25 bg-primary/8 backdrop-blur-sm"
             >
-              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-primary">
+              <span className="text-[9px] sm:text-[11px] font-bold uppercase tracking-[0.12em] sm:tracking-[0.18em] text-primary whitespace-nowrap">
                 Conçu et lancé au Burkina Faso
               </span>
             </motion.div>
@@ -38,7 +38,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.08 }}
-              className="text-[clamp(2.4rem,4.8vw,4.4rem)] font-display font-black text-white leading-[1.08] tracking-tight mb-5 [text-shadow:0_4px_24px_rgba(0,0,0,0.55)]"
+              className="text-[clamp(2.15rem,10vw,4.4rem)] lg:text-[clamp(2.4rem,4.8vw,4.4rem)] font-display font-black text-white leading-[1.06] tracking-tight mb-5 [text-shadow:0_4px_24px_rgba(0,0,0,0.55)]"
             >
               Le premier labo
               <br />
@@ -63,7 +63,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.18 }}
-              className="text-[17.5px] text-white/70 font-light leading-[1.78] max-w-xl mb-7 [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]"
+              className="text-[16px] sm:text-[17.5px] text-white/70 font-light leading-[1.65] sm:leading-[1.78] max-w-xl mb-7 [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]"
             >
               FasoLab permet à vos élèves de réaliser des expériences de chimie et de
               physique en 3D immersive, assistées par un bracelet capteur — sans
@@ -74,18 +74,18 @@ export function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.26 }}
-              className="flex flex-col sm:flex-row gap-4 mb-2"
+              className="grid grid-cols-2 gap-2.5 sm:flex sm:flex-row sm:gap-4 mb-2 w-full max-w-xl"
             >
               <Link
                 href="/demo"
-                className="btn-shine group inline-flex items-center justify-center gap-2.5 h-[52px] px-8 bg-primary hover:bg-primary-dark text-white text-[15px] font-bold rounded-2xl transition-all duration-200 teal-glow hover:scale-[1.03]"
+                className="btn-shine group inline-flex w-full items-center justify-center gap-1.5 h-[52px] px-2 sm:px-6 bg-primary hover:bg-primary-dark text-white text-[12px] sm:text-[15px] font-bold rounded-2xl transition-all duration-200 teal-glow hover:scale-[1.03] whitespace-nowrap"
               >
                 Demander une démo
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/packs"
-                className="inline-flex items-center justify-center gap-2 h-[52px] px-8 border border-white/15 text-white/80 text-[15px] font-semibold rounded-2xl hover:bg-white/6 hover:border-white/25 transition-all duration-200"
+                className="inline-flex w-full items-center justify-center gap-1.5 h-[52px] px-2 sm:px-6 border border-white/15 text-white/80 text-[12px] sm:text-[15px] font-semibold rounded-2xl hover:bg-white/6 hover:border-white/25 transition-all duration-200 whitespace-nowrap"
               >
                 Voir les expériences
               </Link>

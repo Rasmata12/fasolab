@@ -61,7 +61,7 @@ export function Navbar() {
           : "bg-gradient-to-b from-black/40 via-black/15 to-black/[0.02] border-white/[0.14]"
       }`}
     >
-      <div className="h-[108px] w-full px-5 pt-4 md:px-8 xl:px-12 flex items-center gap-6">
+      <div className="h-[88px] lg:h-[108px] w-full px-4 sm:px-5 pt-2 lg:pt-4 md:px-8 xl:px-12 flex items-center gap-4 lg:gap-6">
         {/* ---- Bloc gauche : logo collé au bord + 3 liens ---- */}
         <div className="flex items-center gap-8 xl:gap-10 flex-shrink-0">
           <Link href="/" aria-label="Accueil FasoLab">

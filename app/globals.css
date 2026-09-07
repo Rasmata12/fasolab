@@ -18,10 +18,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   @apply bg-white text-navy antialiased;
+  overflow-x: hidden;
 }
 
 h1, h2, h3 {
