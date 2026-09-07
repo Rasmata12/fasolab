@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-body: "Poppins", system-ui, sans-serif;
+  --font-display: "Poppins", system-ui, sans-serif;
+  --teal: #1aa89c;
+  --gold: #c9a84c;
+  --radius-md: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-navy antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+}
+
+/* Subtle grain texture for a premium, non-flat feel */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  opacity: 0.35;
+}
+
+.teal-glow {
+  box-shadow: 0 0 40px rgba(26, 168, 156, 0.28), 0 0 80px rgba(26, 168, 156, 0.14);
+}
+
+.navbar-demo-pulse {
+  animation: navbar-demo-pulse 0.9s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes navbar-demo-pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.025);
+    filter: brightness(1.07);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar-demo-pulse {
+    animation: none;
+  }
+}
+
+/* Éclat qui balaie le bouton "Demander une démo" en continu — un simple
+   fond ne suffisait pas à le rendre frappant, ce reflet en mouvement attire
+   l'œil sans être criard. */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(115deg, transparent, rgba(255, 255, 255, 0.75), transparent);
+  transform: skewX(-22deg);
+  animation: btn-shine-sweep 3s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes btn-shine-sweep {
+  0% { left: -60%; }
+  38% { left: 130%; }
+  100% { left: 130%; }
+}
+
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(13, 27, 62, 0.1);
+}
+
+/* Teal shimmer text, used sparingly for the hero highlight word */
+.shimmer-teal {
+  background: linear-gradient(90deg, #1aa89c, #5be3d6, #1aa89c);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3.2s linear infinite;
+}
+
+@keyframes shimmer {
+  from { background-position: -200% center; }
+  to { background-position: 200% center; }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.4); }
+}
+.pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Custom scrollbar, teal accent */
+::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar-track { background: #f4f1eb; }
+::-webkit-scrollbar-thumb { background: #1aa89c; border-radius: 4px; }
+
+/* ── Scroll reveal (used by components/Reveal.tsx) ── */
+.scroll-reveal {
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.scroll-reveal.fade-up { transform: translateY(28px); }
+.scroll-reveal.fade-in { transform: none; }
+.scroll-reveal.fade-scale { transform: scale(0.94); }
+.scroll-reveal.slide-left { transform: translateX(-32px); }
+.scroll-reveal.slide-right { transform: translateX(32px); }
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
