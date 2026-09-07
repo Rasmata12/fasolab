@@ -42,7 +42,8 @@ export function Hero() {
             >
               Votre labo
               <br />
-              de sciences{" "}
+              de sciences
+              <br />
               <span className="relative inline-block">
                 <span className="shimmer-teal">virtuel</span>
                 <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 8" fill="none">
@@ -55,8 +56,6 @@ export function Hero() {
                   />
                 </svg>
               </span>
-              <br />
-              pensé pour l&apos;Afrique
             </motion.h1>
 
             <motion.p
