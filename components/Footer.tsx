@@ -16,8 +16,8 @@ export function Footer() {
       <div className="h-[1.5px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
       <div className="max-w-[1560px] mx-auto px-4 sm:px-6 md:px-10 xl:px-16 py-12 sm:py-14 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-6 mb-12">
-          <div className="md:col-span-5 min-w-0">
+        <div className="grid grid-cols-2 md:grid-cols-12 gap-x-5 gap-y-9 md:gap-6 mb-12">
+          <div className="col-span-2 md:col-span-5 min-w-0">
             <Logo variant="light" size="lg" className="mb-5" />
             <p className="text-[13px] text-white/40 font-light leading-relaxed max-w-[280px]">
               {SITE.description}
@@ -53,7 +53,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="md:col-span-3 md:col-start-7">
+          <div className="col-span-1 md:col-span-3 md:col-start-7">
             <h4 className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/35 mb-5">
               Navigation
             </h4>
@@ -71,7 +71,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="md:col-span-3">
+          <div className="col-span-1 md:col-span-3">
             <h4 className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/35 mb-5">
               Contact
             </h4>
@@ -97,16 +97,16 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/[0.06] pt-7 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-[12px] text-white/20 font-light">
+        <div className="border-t border-white/[0.06] pt-7 flex flex-row items-center justify-between gap-3">
+          <p className="text-[10px] sm:text-[12px] text-white/20 font-light">
             © {new Date().getFullYear()} {SITE.name}. Tous droits réservés.
           </p>
-          <div className="flex gap-5">
+          <div className="flex gap-3 sm:gap-5 shrink-0">
             {FOOTER_LINKS.legal.map((l) => (
               <Link
                 key={l.label}
                 href={l.href}
-                    className="text-[12px] text-white/20 hover:text-white/45 transition-colors font-light"
+                    className="text-[10px] sm:text-[12px] text-white/20 hover:text-white/45 transition-colors font-light whitespace-nowrap"
               >
                 {l.label}
               </Link>

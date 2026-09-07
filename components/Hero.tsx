@@ -14,20 +14,20 @@ import iconLight from "@/assets/images/fasolab-icon-light.png";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[calc(100svh-52px)] bg-navy flex flex-col justify-center pt-[112px] pb-20 lg:h-[calc(100vh-52px)] lg:min-h-[620px] lg:pt-[108px] lg:pb-0 overflow-hidden">
+    <section className="relative h-[calc(100svh-52px)] min-h-[600px] lg:h-[calc(100vh-52px)] lg:min-h-[620px] bg-navy flex flex-col justify-center pt-[96px] pb-8 lg:pt-[108px] lg:pb-0 overflow-hidden">
       <WaveBackground />
       <div className="absolute inset-0 pointer-events-none">
         <CircuitNetwork className="absolute -bottom-10 -right-10 w-[260px] h-[200px] md:w-[320px] md:h-[240px]" />
       </div>
 
-      <div className="relative z-10 max-w-[1560px] mx-auto px-4 sm:px-6 md:px-10 xl:px-16 py-8 md:py-12 w-full">
-        <div className="grid lg:grid-cols-[1fr_1.25fr] gap-14 xl:gap-24 items-center">
+      <div className="relative z-10 max-w-[1560px] mx-auto px-4 sm:px-6 md:px-10 xl:px-16 py-4 md:py-12 w-full">
+        <div className="grid lg:grid-cols-[1fr_1.25fr] gap-8 xl:gap-24 items-center">
           <div className="flex flex-col">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex max-w-full items-center gap-2 self-start mb-5 pl-2.5 pr-3.5 sm:pr-5 py-2.5 rounded-full border border-primary/25 bg-primary/8 backdrop-blur-sm"
+              className="inline-flex max-w-full items-center gap-2 self-start mb-3 sm:mb-5 pl-2.5 pr-3.5 sm:pr-5 py-2 rounded-full border border-primary/25 bg-primary/8 backdrop-blur-sm"
             >
               <span className="text-[9px] sm:text-[11px] font-bold uppercase tracking-[0.12em] sm:tracking-[0.18em] text-primary whitespace-nowrap">
                 Conçu et lancé au Burkina Faso
@@ -38,7 +38,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.08 }}
-              className="text-[clamp(2.15rem,10vw,4.4rem)] lg:text-[clamp(2.4rem,4.8vw,4.4rem)] font-display font-black text-white leading-[1.06] tracking-tight mb-5 [text-shadow:0_4px_24px_rgba(0,0,0,0.55)]"
+              className="text-[clamp(2rem,9.5vw,4.4rem)] lg:text-[clamp(2.4rem,4.8vw,4.4rem)] font-display font-black text-white leading-[1.03] tracking-tight mb-3 sm:mb-5 [text-shadow:0_4px_24px_rgba(0,0,0,0.55)]"
             >
               Le premier labo
               <br />
@@ -63,7 +63,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.18 }}
-              className="text-[16px] sm:text-[17.5px] text-white/70 font-light leading-[1.65] sm:leading-[1.78] max-w-xl mb-7 [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]"
+              className="text-[14px] sm:text-[17.5px] text-white/70 font-light leading-[1.5] sm:leading-[1.78] max-w-xl mb-4 sm:mb-7 [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]"
             >
               FasoLab permet à vos élèves de réaliser des expériences de chimie et de
               physique en 3D immersive, assistées par un bracelet capteur — sans
@@ -74,7 +74,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.26 }}
-              className="grid grid-cols-2 gap-2.5 sm:flex sm:flex-row sm:gap-4 mb-2 w-full max-w-xl"
+              className="grid grid-cols-2 gap-2 sm:flex sm:flex-row sm:gap-4 mb-0 w-full max-w-xl"
             >
               <Link
                 href="/demo"

@@ -115,13 +115,13 @@ export function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden bg-white border-t border-gray-100 overflow-hidden"
           >
-            <div className="px-6 py-6 flex flex-col gap-1">
+            <div className="px-5 sm:px-6 py-5 sm:py-6 flex flex-col gap-0.5 max-h-[calc(100svh-88px)] overflow-y-auto">
               {[...LEFT_LINKS, ...RIGHT_LINKS].map(({ label, href }) => (
                 <Link
                   key={label}
                   href={href}
                   onClick={() => setOpen(false)}
-                  className="py-2.5 text-[15.5px] font-medium text-navy/80 hover:text-primary transition-colors"
+                  className="py-2.5 text-[15px] font-medium text-navy/80 hover:text-primary transition-colors"
                 >
                   {label}
                 </Link>
